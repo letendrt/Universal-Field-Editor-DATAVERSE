@@ -15,13 +15,11 @@ The python file can only process the CSV format as of now. As such, users who co
 <br>
 <br>
 <br>
-<br>
 
 ## :ledger: YELLOW :ledger:
 Exclusively used for the dataset <b>DOI</b>. Can be in link format (https://doi.org/) or in standard "doi:" format. The code will convert link format to standard format during CSV parsing. <br>
 <img width="267" height="105" alt="image" src="https://github.com/user-attachments/assets/1d3d6000-084c-40da-8d34-444c70e55fbd" /> <br>
 <img width="453" height="142" alt="image" src="https://github.com/user-attachments/assets/662b7389-1727-47c8-8bae-f3dc3f181d3e" />
-<br>
 <br>
 <br>
 <br>
@@ -34,7 +32,6 @@ Used for metadata fields that are entirely <b>PRIMITIVE</b> (meaning that there 
 In a <b>PRIMITIVE</b> field, there is only one value. Depending on the field, it can either be a <b>STRING</b> or an <b>ARRAY</b> (that itself holds one or more <b>STRING</b>). In the example below, title and subtitle take a <b>STRING</b>, but alternativeTitle takes an <b>ARRAY</b>. <br>
 <img width="313" height="378" alt="image" src="https://github.com/user-attachments/assets/648cc146-cb53-4ced-8644-c35bcb8f17f5" /> <br>
 If a <b>PRIMITIVE</b> field takes an <b>ARRAY</b>, it can hold more than one value in the CSV field. This can be done by adding a ‘+’ sign between the cell values (more on this in the RED section). 
-<br>
 <br>
 <br>
 <br>
@@ -61,13 +58,11 @@ Example: “Hello; + World; Federal Agency”
 <br>
 <br>
 <br>
-<br>
 
 ## :blue_book: BLUE :blue_book:
 Used to denote control vocabulary, it is neither PRIMITIVE nor COMPOUND, it is controlledVocabulary. Although it is its own typeClass, it works similarly to the input of values in PRIMITIVE fields. The main difference is that only allowed terms (usually a scroll down menu on the borealis user interface) are allowed - elsewise it will return an error 403 (or other) when pushing through the API.<br>
 <img width="423" height="102" alt="image" src="https://github.com/user-attachments/assets/f2fd4c0a-d60e-4eeb-901e-e4013edd3acd" /> <br>
 <img width="493" height="186" alt="image" src="https://github.com/user-attachments/assets/0d7a5a20-365f-46f2-95c5-f2022457549b" />
-<br>
 <br>
 <br>
 <br>
