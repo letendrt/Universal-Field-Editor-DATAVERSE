@@ -13,3 +13,13 @@ YELLOW <br>
 Exclusively used for the dataset DOI <br>
 <img width="178" height="70" alt="image" src="https://github.com/user-attachments/assets/1d3d6000-084c-40da-8d34-444c70e55fbd" />
 
+
+GREEN <br>
+Used for metadata fields that are entirely PRIMITIVE (meaning that there is neither parent nor children). E.g., title, subtitle, alternativeTitle, etc. <br>
+<img width="538" height="70" alt="Screenshot 2025-11-17 130742" src="https://github.com/user-attachments/assets/7017867a-c1b9-43e4-89e3-74657a28ee41" />
+
+
+In a PRIMITIVE field, there is only one value. Depending on the field, it can either be a STRING or an ARRAY (that itself holds one or more STRING). In the example below, title and subtitle take a STRING, but alternativeTitle takes an ARRAY. 
+
+If a PRIMITIVE field takes an ARRAY, it can hold more than one value in the CSV field. This can be done by adding a ‘+’ sign between the cell values. 
+
