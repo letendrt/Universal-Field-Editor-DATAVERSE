@@ -10,6 +10,12 @@ This repository holds the relevant code for the universal field editor in Datave
 Each column in the file denotes a different citation metadata field from Dataverse. The CSV file has no colour coding. The XLSX file has colour coding. The spreadsheet (as of now) only holds citation metadata block editing functionalities. There are 4 types of columns: Yellow, Green, Red, and Blue. All of which represent a different type of metadata field.
 <br>
 <br>
+### :exclamation: Note :exclamation:
+The python file can only process the CSV format as of now. As such, users who compile their mass changes in Excel should export the file as a csv when running the script. 
+<br>
+<br>
+<br>
+<br>
 
 ### :ledger: YELLOW :ledger:
 Exclusively used for the dataset <b>DOI</b> <br>
