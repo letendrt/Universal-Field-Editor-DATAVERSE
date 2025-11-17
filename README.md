@@ -11,7 +11,7 @@ Each column in the file denotes a different citation metadata field from Dataver
 <br>
 
 ### :warning: Note :warning:
-The python file can only process the CSV format as of now. As such, users who compile their mass changes in Excel should export the file as a csv when running the script. 
+The python file can only process the CSV format as of now. As such, users who compile their mass changes in Excel should export the file as a CSV when running the script. 
 <br>
 <br>
 <br>
