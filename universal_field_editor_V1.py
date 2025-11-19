@@ -48,7 +48,7 @@ data_api_origin = DataAccessApi(url_base_origin, api_token_origin)
 
 # This function checks if a dataset is locked (for one reason or another; it could be due to .tab file ingestion, for instance)
 # More documentation on what this entails available here: https://guides.dataverse.org/en/6.2/api/native-api.html#dataset-locks
-
+# It currently isn't being used in this current version of the code - this will change in due time
 def check_lock(dataset_id):
 
     time_start = datetime.now()                                                     # Set up internal timer
@@ -93,10 +93,8 @@ def check_lock(dataset_id):
 
 
 
-# This function parses through the metadata blocks and the CSV file row
-# to retrieve to-be updated metadata. It formats the new metadata field value
-# by calling other functions (see below). It then pushes the updated fields
-# to the API
+# This function parses through the metadata blocks and the CSV file row to retrieve to-be updated metadata. It formats the new metadata field value
+# by calling other functions (see below). It then pushes the updated fields to the API
 
 # It takes 6 arguments:
 # - latest_version: most recent version of the metadatablock (pulled form borealis);
@@ -208,12 +206,7 @@ def update_metadata_name(latest_version, row, doi, header, directory, master_lis
 
 
 
-
-
-
-
-# This function formats the values of primitive metadata fields if an only if
-# they are imbedded in a compound field (meaning that it is a first-level field)
+# This function formats the values of primitive metadata fields if an only if they are imbedded in a compound field (meaning that it is a first-level field)
 
 # Takes 3 arguments:
 # - change_area: the name of the field whose value is being updated
@@ -247,6 +240,10 @@ def primitive_formatter(change_area, row, field):
             field_val = record_check(new_unit, field)                              # assign record_check function output to the variable 'field_formatter'
             return field_val                                                       # return field_val
 
+
+
+
+
 # This function was made to avoid code redundancy in the above function.
 
 # Takes 2 arguments:
@@ -269,12 +266,7 @@ def record_check(new_unit, field):
 
 
 
-
-
-
-
-# This function is used to format metadata fields that are compound in nature
-# (meaning that they hold primitive fields as values)
+# This function is used to format metadata fields that are compound in nature (meaning that they hold primitive fields as values)
 
 # Takes 2 arguments:
 # - header: name of the CSV column currently being parsed through by update_metadata_name()
@@ -382,8 +374,7 @@ def compound_formatter(header, row):
 
 
 
-# File load and selection. This is the first function to run.
-# All others a called form this one
+# File load and selection. This is the first function to run. All others a called form this one
 
 def file_loader():
 
@@ -509,3 +500,6 @@ def publish_dataset(doi):
 
 
 file_loader()
+
+
+
