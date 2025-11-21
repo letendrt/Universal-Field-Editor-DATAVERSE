@@ -4,11 +4,52 @@ This repository holds the relevant code for the universal field editor in Datave
 
 # 1. Universal_Field_Editing python file
 There are 5 major functions in this script - they are listed below in the sequential order of use:
+## <b>1 - file_loader()</b>
+File load and selection. This is the first function to run. 
+<br>
+It takes no argument 
+<br>
+<br>
+
+## <b> 2 - xml_selecter(header)</b>
+Uses the CSV file MARKER to select the correct XML dictionary - from which it will create a master_list used in a later function (master_list is a list of list. master_list[0] holds the primitive metadata fields, and master_list[1] holds the compound metadata fields). 
+<br>
+<br>
+Takes one argument:
 <ul>
-  <li> file_loader(): <br> File load and selection. This is the first function to run. </li>
-  <li> xml_selecter(header): <br> Uses the CSV file MARKER to </li>
-  <li> </li>
+    1 - header: list of column headers in the CSV file 
 </ul>
+<br>
+
+## <b> 3 - update_metadata(latest_version, row, doi, header, directory, master_list, block)</b> 
+  This function parses through the metadata blocks and the CSV file row to retrieve to-be updated metadata. It formats the new metadata field value by calling other functions (see below). It then pushes the updated fields to the API (via pyDataverse).
+    <br>
+    <br>
+    Takes six argument:
+    <ul>
+       1 - latest_version: most recent version of the metadatablock (pulled form borealis); <br>
+       2 - row: the row of the CSV file; <br>
+       3 - doi: the doi of the dataset being modified; <br>
+       4 - header: list of all to-be parsed field column names; <br>
+       5 - directory: dictionary of all the main-level citation metadata fields (defined in file_loader()); <br>
+       6 - master_list: list of lists defined in xml_selecter()
+    </ul>
+    <br>
+    
+## <b> 4 - primitive_formatter(change_area, row, field) </b>
+This function formats the values of primitive metadata fields if an only if they are not imbedded in a compound field (meaning that it is a first-level field)
+<br>
+<br>
+Takes three arguments:
+<ul>
+  1 - change_area: the name of the field whose value is being updated;
+  2 - row: CSV row in which the new values are held;
+  3 - field: JSON/dictionary format that will be modified and returned.
+</ul>
+<br>
+
+## <b> 5 - record_check(new_unit, field) </b>
+
 
 
 # 2. Citation_Fields CSV/XLSX File
