@@ -3,7 +3,7 @@ This repository holds the relevant code for the universal field editor in Datave
 
 
 # 1. Universal_Field_Editing python file
-There are 5 major functions in this script - they are listed below in the sequential order of use:
+There are 5 major functions in this script - they are listed below in the sequential order of use (primitive_formatter and compound_formatter depend on the type of metadata being processed):
 ## <b>1 - file_loader()</b>
 File load and selection. This is the first function to run. 
 <br>
@@ -37,18 +37,59 @@ Takes one argument:
     <br>
     
 ## <b> 4 - primitive_formatter(change_area, row, field) </b>
-This function formats the values of primitive metadata fields if an only if they are not imbedded in a compound field (meaning that it is a first-level field)
+This function formats the values of primitive metadata fields if an only if they are not imbedded in a compound field (meaning that it is a first-level field). It is called in update_metadata()
 <br>
 <br>
 Takes three arguments:
 <ul>
-  1 - change_area: the name of the field whose value is being updated;
-  2 - row: CSV row in which the new values are held;
+  1 - change_area: the name of the field whose value is being updated; <br>
+  2 - row: CSV row in which the new values are held; <br>
   3 - field: JSON/dictionary format that will be modified and returned.
 </ul>
 <br>
 
 ## <b> 5 - record_check(new_unit, field) </b>
+This function is used to avoid code redundancy in primitive_formatter(). It checks if the new field value is not an empty string or empty listed string. It is called in primitive_formatter().
+<br>
+<br>
+Takes two arguments:
+<ul>
+    1 - new_unit: the new value used to modify the existing record; <br>
+    2 - field: the existing record in which the value is added.
+</ul>
+<br>
+
+## <b> 6 - compound_formatter(header, row) </b>
+This function is used to format metadata fields that are compound in nature (meaning that they hold primitive fields as values). It is called in update_metadata()
+<br>
+<br>
+Takes two arguments:
+<ul>
+    1 - header: name of the CSV column currently being parsed through by update_metadata(); <br>
+    2 - row: the CSV file row for the dataset.
+</ul>
+<br>
+
+## <b> 7 - API_push(field, doi) </b>
+This function pushes the updated metadata field to the API.
+<br>
+<br>
+Takes two arguments:
+<ul>
+    1 - field: the metadata field ready to be updated; <br>
+    2 - doi: the dataset doi.
+</ul>
+<br>
+
+## <b> 8 - check_lock(dataset_id) </b>
+This function checks if a dataset is locked (for one reason or another; it could be due to .tab file ingestion, for instance). More documentation on what this entails available here: https://guides.dataverse.org/en/6.2/api/native-api.html#dataset-locks. It is not currently in use in the the present version of the code, but this will be updated in due time.
+<br>
+<br>
+Takes one argument:
+<ul>
+    1 - dataset_id: the dataset doi
+</ul>
+
 
 
 
