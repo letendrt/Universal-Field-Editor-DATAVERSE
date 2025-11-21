@@ -110,7 +110,7 @@ def check_lock(dataset_id):
 # - master_list: list of lists defined in file_loader() ----
 #           master_list[0] = primitive field typeNames, master_list[1] = compound field typeNames
 
-def update_citation(latest_version, row, doi, header, directory, master_list, block):
+def update_metadata(latest_version, row, doi, header, directory, master_list, block):
 
     updated_citation = {}                                                            # Creating empty dictionary for indexing (I am aware that this is json formatting as well as dictionary)
     updated_citation['fields'] = []                                                  # Creating new dictionary lock for keywords
@@ -429,7 +429,7 @@ def file_loader():
                     print(latest_version)
 
 
-                pub_stat = update_citation(latest_version, row, doi, header, directory, master_list, block)       # Assign fuinction output to the variable 'pub_stat' - optional, only if for auto-publish
+                pub_stat = update_metadata(latest_version, row, doi, header, directory, master_list, block)       # Assign fuinction output to the variable 'pub_stat' - optional, only if for auto-publish
 
 
                 #if pub_stat == True:                                              # If pub_stab is returned as True
