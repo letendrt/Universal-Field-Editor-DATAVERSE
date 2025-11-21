@@ -3,11 +3,16 @@ This repository holds the relevant code for the universal field editor in Datave
 
 
 # 1. Universal_Field_Editing python file
-Will be adding a description here momentarily
+There are 5 major functions in this script - they are listed below in the sequential order of use:
+<ul>
+  <li> file_loader():  </li>
+  <li> xml_selecter(header) </li>
+  <li> </li>
+</ul>
 
 
 # 2. Citation_Fields CSV/XLSX File
-Each column in the file denotes a different citation metadata field from Dataverse. The CSV file has no colour coding. The XLSX file has colour coding. The spreadsheet (as of now) only holds citation metadata block editing functionalities. There are 4 types of columns: Yellow, Green, Red, and Blue. All of which represent a different type of metadata field.
+Each column in the file denotes a different citation metadata field from Dataverse. The CSV file has no colour coding. The XLSX file has colour coding. The spreadsheet (as of now) only holds citation metadata block editing functionalities. There are 4 types of columns: Yellow, Green, Red, and Blue. All of which represent a different type of metadata field. There is a Black 'Marker' column on each sheet (see documentation below). 
 <br>
 
 ### :warning: Note :warning:
