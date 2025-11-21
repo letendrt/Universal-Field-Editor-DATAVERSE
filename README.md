@@ -5,8 +5,8 @@ This repository holds the relevant code for the universal field editor in Datave
 # 1. Universal_Field_Editing python file
 There are 5 major functions in this script - they are listed below in the sequential order of use:
 <ul>
-  <li> file_loader():  </li>
-  <li> xml_selecter(header) </li>
+  <li> file_loader(): <br> File load and selection. This is the first function to run. </li>
+  <li> xml_selecter(header): <br> Uses the CSV file MARKER to </li>
   <li> </li>
 </ul>
 
