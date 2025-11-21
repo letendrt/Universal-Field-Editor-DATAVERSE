@@ -2,7 +2,7 @@
 This repository holds the relevant code for the universal field editor in Dataverse (more specifically Borealis)
 
 
-# :snake: 1. Universal_Field_Editing python file 
+# :snake: 1. Universal_Field_Editing python file :snake:
 There are 5 major functions in this script - they are listed below in the sequential order of use (primitive_formatter and compound_formatter depend on the type of metadata being processed):
 
 
