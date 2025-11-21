@@ -11,7 +11,7 @@ Each column in the file denotes a different citation metadata field from Dataver
 <br>
 
 ### :warning: Note :warning:
-The python file can only process the CSV format as of now. As such, users who compile their mass changes in Excel should export the file as a CSV when running the script. 
+The python file can only process the CSV format as of now. That being said, it is easier for users to edit their fields in excel as all sheets are made available there (requires one excel sheet to be open as opposed to several CSV sheets to be opened). Nevertheless, those XLSX sheets will have to be exported to CSV.
 <br>
 <br>
 <br>
@@ -67,10 +67,17 @@ Used to denote control vocabulary, it is neither PRIMITIVE nor COMPOUND, it is c
 <br>
 <br>
 
+## :notebook: BLACK MARKER :notebook:
+### :warning::warning: MUST BE KEPT IN THE SHEET. DO NOT REMOVE. 
+Used for the code to recognise which sheet is currently being processed (citation metadata or social sciences metadata). <br>
+MARKER 1 indicates to the code that it is processing citation metadata <br>
+MARKER 2 indicates to the code that it is processing social sciences metadata <br>
 
-
-
-
+<img width="200" height="105" alt="Screenshot 2025-11-21 113154" src="https://github.com/user-attachments/assets/1b116c43-dba6-4806-b05e-759aaba47e39" />
+<img width="200" height="105" alt="Screenshot 2025-11-21 113531" src="https://github.com/user-attachments/assets/2405d004-6556-4aa7-8bd4-216e4766fa12" />
+<br>
+<br>
+<br>
 
 
 
