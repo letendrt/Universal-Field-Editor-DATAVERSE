@@ -64,3 +64,6 @@ coverage.xml
 *.json
 .DS_Store
 myenv/
+EPA*
+*.todo
+TODO*
