@@ -1,175 +1,339 @@
-# :tada: Universal-Field-Editor-DATAVERSE :tada:
-This repository holds the relevant code for the universal field editor in Dataverse (more specifically Borealis)
+# Universal Field Editor for Dataverse
 
+Bulk edit dataset metadata in Dataverse installations using CSV files.
 
-# :snake: 1. Universal_Field_Editor python file :snake:
-There are 5 major functions in this script - they are listed below in the sequential order of use (primitive_formatter and compound_formatter depend on the type of metadata being processed):
+## Overview
 
+The Universal Field Editor is a Python script that enables batch updates to dataset metadata in Dataverse repositories (including Borealis). Instead of manually editing metadata fields through the web interface, you can use CSV files to update multiple datasets at once.
 
-## <b> :file_folder: 1 - file_loader() </b>
-File load and selection. This is the first function to run. 
-<br>
-It takes no argument 
-<br>
-<br>
+### What it does
 
-## <b> :bookmark_tabs: 2 - xml_selecter(header) </b>
-Uses the CSV file MARKER to select the correct XML dictionary - from which it will create a master_list used in a later function (master_list is a list of list. master_list[0] holds the primitive metadata fields, and master_list[1] holds the compound metadata fields). 
-<br>
-<br>
-Takes one argument:
-<ul>
-    1 - header: list of column headers in the CSV file 
-</ul>
-<br>
+- Updates dataset metadata fields via the Dataverse API
+- Supports multiple metadata blocks (citation, social sciences, etc.)
+- Handles primitive fields, compound fields, and controlled vocabulary
+- Processes multiple datasets from a single CSV file
+- Checks dataset locks and waits for operations to complete
 
-## <b> :newspaper: 3 - update_metadata(latest_version, row, doi, header, directory, master_list, block) </b> 
-  This function parses through the metadata blocks and the CSV file row to retrieve to-be updated metadata. It formats the new metadata field value by calling other functions (see below). It then pushes the updated fields to the API (via pyDataverse).
-    <br>
-    <br>
-    Takes six argument:
-    <ul>
-       1 - latest_version: most recent version of the metadatablock (pulled form borealis); <br>
-       2 - row: the row of the CSV file; <br>
-       3 - doi: the doi of the dataset being modified; <br>
-       4 - header: list of all to-be parsed field column names; <br>
-       5 - directory: dictionary of all the main-level citation metadata fields (defined in file_loader()); <br>
-       6 - master_list: list of lists defined in xml_selecter()
-    </ul>
-    <br>
-    
-## <b> :floppy_disk: 4 - primitive_formatter(change_area, row, field) </b>
-This function formats the values of primitive metadata fields if an only if they are not imbedded in a compound field (meaning that it is a first-level field). It is called in update_metadata()
-<br>
-<br>
-Takes three arguments:
-<ul>
-  1 - change_area: the name of the field whose value is being updated; <br>
-  2 - row: CSV row in which the new values are held; <br>
-  3 - field: JSON/dictionary format that will be modified and returned.
-</ul>
-<br>
+## Installation
 
-## <b> :eyes: 5 - record_check(new_unit, field) </b>
-This function is used to avoid code redundancy in primitive_formatter(). It checks if the new field value is not an empty string or empty listed string. It is called in primitive_formatter().
-<br>
-<br>
-Takes two arguments:
-<ul>
-    1 - new_unit: the new value used to modify the existing record; <br>
-    2 - field: the existing record in which the value is added.
-</ul>
-<br>
+### Requirements
 
-## <b> :dvd: 6 - compound_formatter(header, row) </b>
-This function is used to format metadata fields that are compound in nature (meaning that they hold primitive fields as values). It is called in update_metadata()
-<br>
-<br>
-Takes two arguments:
-<ul>
-    1 - header: name of the CSV column currently being parsed through by update_metadata(); <br>
-    2 - row: the CSV file row for the dataset.
-</ul>
-<br>
+- Python 3.8+
+- Dataverse account with API access
 
-## <b> :satellite: 7 - API_push(field, doi) </b>
-This function pushes the updated metadata field to the API.
-<br>
-<br>
-Takes two arguments:
-<ul>
-    1 - field: the metadata field ready to be updated; <br>
-    2 - doi: the dataset doi.
-</ul>
-<br>
+### Setup
 
-## <b> :lock: 8 - check_lock(dataset_id) </b>
-This function checks if a dataset is locked (for one reason or another; it could be due to .tab file ingestion, for instance). More documentation on what this entails available here: https://guides.dataverse.org/en/6.2/api/native-api.html#dataset-locks. It is not currently in use in the the present version of the code, but this will be updated in due time.
-<br>
-<br>
-Takes one argument:
-<ul>
-    1 - dataset_id: the dataset doi
-</ul>
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd Universal-Field-Editor-DATAVERSE
+```
 
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
+Or install using Poetry:
+```bash
+poetry install
+```
 
+3. Configure your environment:
+```bash
+cp .env.example .env
+```
 
-# 2. Citation_Fields CSV/XLSX File
-Each column in the file denotes a different citation metadata field from Dataverse. The CSV file has no colour coding. The XLSX file has colour coding. The spreadsheet (as of now) only holds citation metadata block editing functionalities. There are 4 types of columns: Yellow, Green, Red, and Blue. All of which represent a different type of metadata field. There is a Black 'Marker' column on each sheet (see documentation below). 
-<br>
+4. Edit `.env` with your Dataverse credentials and CSV file path.
 
-### :warning: Note :warning:
-The python file can only process the CSV format as of now. That being said, it is easier for users to edit their fields in excel as all sheets are made available there (requires one excel sheet to be open as opposed to several CSV sheets to be opened). Nevertheless, those XLSX sheets will have to be exported to CSV.
-<br>
-<br>
-<br>
+## Configuration
 
-## :ledger: YELLOW :ledger:
-Exclusively used for the dataset <b>DOI</b>. Can be in link format (https://doi.org/) or in standard "doi:" format. The code will convert link format to standard format during CSV parsing. <br>
-<img width="267" height="105" alt="image" src="https://github.com/user-attachments/assets/1d3d6000-084c-40da-8d34-444c70e55fbd" /> <br>
-<img width="453" height="142" alt="image" src="https://github.com/user-attachments/assets/662b7389-1727-47c8-8bae-f3dc3f181d3e" />
-<br>
-<br>
-<br>
+Create a `.env` file with the following variables:
 
-## :green_book: GREEN :green_book:
-Used for metadata fields that are entirely <b>PRIMITIVE</b> (meaning that there is neither parent nor children). E.g., title, subtitle, alternativeTitle, etc. <br>
-<img width="807" height="105" alt="Screenshot 2025-11-17 130742" src="https://github.com/user-attachments/assets/7017867a-c1b9-43e4-89e3-74657a28ee41" />
-<br>
-<br>
-In a <b>PRIMITIVE</b> field, there is only one value. Depending on the field, it can either be a <b>STRING</b> or an <b>ARRAY</b> (that itself holds one or more <b>STRING</b>). In the example below, title and subtitle take a <b>STRING</b>, but alternativeTitle takes an <b>ARRAY</b>. <br>
-<img width="313" height="378" alt="image" src="https://github.com/user-attachments/assets/648cc146-cb53-4ced-8644-c35bcb8f17f5" /> <br>
-If a <b>PRIMITIVE</b> field takes an <b>ARRAY</b>, it can hold more than one value in the CSV field. This can be done by adding a ‘+’ sign between the cell values (more on this in the RED section). 
-<br>
-<br>
-<br>
+```env
+# Required
+DATAVERSE_API_TOKEN=your_api_token_here
+DATAVERSE_BASE_URL=https://demo.borealisdata.ca
+CSV_FILE_PATHS=/path/to/metadata.csv
 
-## :closed_book: RED :closed_book:
-Used to denote COMPOUND fields. A COMPOUND field is a field that holds as its value one or more <b>PRIMITIVE</b> fields (simplification) in an ARRAY. Below is an example of a <b>COMPOUND</b> field in the CSV sheet. Here, the <b>COMPOUND</b> field is keyword, and its children/<b>PRIMITIVE</b> fields are keywordValue and keywordVocabulary. Pragmatically speaking, the values we attribute to the <b>COMPOUND</b> fields are actually that of its children/<b>PRIMITIVE</b> fields. As such, the values we input in the column cells must match the layout of the column header. <br>
-<img width="471" height="114" alt="image" src="https://github.com/user-attachments/assets/60019e8f-1211-41fb-9d61-e7535c6d511a" /> <br>
-<img width="400" height="423" alt="image" src="https://github.com/user-attachments/assets/89d02a4a-ada2-4296-b507-e006ae9d3d84" />
+# Optional
+AUTO_PUBLISH=false
+LOG_LEVEL=INFO
+TEST_MODE=false
+```
 
+### Getting an API Token
 
-In the above example, we have the <b>COMPOUND</b> field “keyword” - the <b>COMPOUND</b> field name is always separated from its <b>PRIMITIVE</b> fields by a colon [ : ]. This is just so that the python code can differentiate the COMPOUND name from the <b>PRIMITIVE</b> names. The <b>PRIMITIVE</b> names of each column header are split by a semi-colon [ ; ]. This is done so that the code can do a second pass and differentiate <b>PRIMITIVE</b> fields. 
-<br>
-<br>
-In the example “Hello; StatCan”, we can see that it follows a similar pattern to the <b>PRIMITIVE</b> fields in the column header - that is, they are also split by a semi-colon [ ; ]. In this case, “Hello” is the keywordValue, and “StatCan” is the keywordVocabulary. As it may have been noticed by the reader of this document, “Hello; StatCan” is followed by a “+” sign, and then the entry “World; Federal Agency”. Here, the “+” sign is used to denote that there are more than one entry to the field. The code is set up to be recursive and to loop through the metadata updater for as long as there are “+” signs in the cell. 
-<br>
-<br>
-Log example from the code (formatted to facilitate legibility - appears on one line in practice): <br>
-<img width="996" height="673" alt="image" src="https://github.com/user-attachments/assets/8b6e1df2-1020-473c-a346-f42a109ed977" />
-<br>
-<br>
-In the event that we have a keywordValue, but no keywordVocabulary (at which time we would technically have a discrepancy between the column header and its cells), we would simply put a semi-colon followed by a blank space. The code was set up in such a way that allows for some keywords to have a keywordVocabulary even if others do not. Empty strings at the start and end of words are cleaned up with .strip(). An Example is provided below. This approach is used for all <b>COMPOUND</b> fields, not just keywords. Note that this applies to all <b>COMPOUND</b> fields, and not just the keyword field
+1. Log into your Dataverse instance
+2. Go to your user profile
+3. Click "API Token"
+4. Generate or copy your existing token
 
-Example: “Hello; + World; Federal Agency” 
-<br>
-<br>
-<br>
+## Usage
 
-## :blue_book: BLUE :blue_book:
-Used to denote control vocabulary, it is neither PRIMITIVE nor COMPOUND, it is controlledVocabulary. Although it is its own typeClass, it works similarly to the input of values in PRIMITIVE fields. The main difference is that only allowed terms (usually a scroll down menu on the borealis user interface) are allowed - elsewise it will return an error 403 (or other) when pushing through the API.<br>
-<img width="423" height="102" alt="image" src="https://github.com/user-attachments/assets/f2fd4c0a-d60e-4eeb-901e-e4013edd3acd" /> <br>
-<img width="493" height="186" alt="image" src="https://github.com/user-attachments/assets/0d7a5a20-365f-46f2-95c5-f2022457549b" />
-<br>
-<br>
-<br>
+### Basic Usage
 
-## :notebook: BLACK MARKER :notebook:
-### :warning::warning: MUST BE KEPT IN THE SHEET. DO NOT REMOVE. 
-Used for the code to recognise which sheet is currently being processed (citation metadata or social sciences metadata). <br>
-MARKER 1 indicates to the code that it is processing citation metadata <br>
-MARKER 2 indicates to the code that it is processing social sciences metadata <br>
+1. Create a CSV file with your metadata updates (see [CSV Format](#csv-format) below)
+2. Update the `CSV_FILE_PATHS` in your `.env` file
+3. Run the script:
 
-<img width="200" height="105" alt="Screenshot 2025-11-21 113154" src="https://github.com/user-attachments/assets/1b116c43-dba6-4806-b05e-759aaba47e39" />
-<img width="200" height="105" alt="Screenshot 2025-11-21 113531" src="https://github.com/user-attachments/assets/2405d004-6556-4aa7-8bd4-216e4766fa12" />
-<br>
-<br>
-<br>
+```bash
+python universal_field_editor_V2.py
+```
 
+### Using the Makefile
 
+Common operations are available through the Makefile:
 
+```bash
+# Run the field editor
+make run
 
+# Run tests
+make test
 
+# Check code style
+make lint
+```
 
+## CSV Format
+
+The CSV file uses specific column formats to identify field types. Each column header follows a pattern that indicates how the data should be processed.
+
+### Column Header Formats
+
+#### Primitive Fields (Single Value)
+**Format**: `fieldName`
+
+Simple fields that accept a single value or array of values.
+
+Examples:
+- `title` - Dataset title
+- `alternativeTitle` - Alternative titles
+- `subtitle` - Dataset subtitle
+
+**Multiple values**: Use `+` to separate values in a single cell:
+```
+alternativeTitle
+Title 1 + Title 2 + Title 3
+```
+
+#### Compound Fields (Parent-Child Structure)
+**Format**: `parent:child1;child2;child3`
+
+Fields that contain nested primitive fields. Use semicolons to separate child fields.
+
+Examples:
+- `keyword:keywordValue;keywordVocabulary` - Keywords with vocabulary terms
+- `contributor:contributorName;contributorType` - Contributors with type
+
+**Multiple entries**: Use `+` to separate groups:
+```
+keyword:keywordValue;keywordVocabulary
+Economics; controlled + Census; StatCan
+```
+
+**Empty child values**: Use `;` with blank space:
+```
+keyword:keywordValue;keywordVocabulary
+Economics; + Census; StatCan
+```
+
+#### Controlled Vocabulary Fields
+**Format**: `fieldName`
+
+Fields that only accept specific values from a controlled list.
+
+Examples:
+- `subject` - Subject terms (must match Dataverse's controlled list)
+
+#### Dataset Identifier
+**Format**: `doi`
+
+The first column must be the dataset identifier. Can be in either format:
+- DOI format: `doi:10.5072/FK2/12345`
+- URL format: `https://doi.org/10.5072/FK2/12345`
+
+### Marker Column
+
+Each CSV file must have a special marker column to identify the metadata block:
+
+- `MARKER 1` = Citation metadata block
+- `MARKER 2` = Social Sciences and Humanities metadata block
+
+This column should be placed after all data columns.
+
+### Example CSV Structure
+
+```csv
+doi,title,alternativeTitle,keyword:keywordValue;keywordVocabulary,subject,MARKER 1
+https://doi.org/10.5072/FK2/ABC123,My Dataset Title,Alt Title 1 + Alt Title 2,Economics;controlled + Census;StatCan,Economics,1
+```
+
+### Creating CSV Files in Excel
+
+1. Use the provided `All_Sheets.xlsx` as a template
+2. **Important**: Always export to CSV before running the script
+3. The Excel template uses color coding for visual organization:
+   - **Green**: Primitive fields
+   - **Red**: Compound fields
+   - **Blue**: Controlled vocabulary
+   - **Black**: Marker column (do not remove)
+
+## API Functions
+
+The script includes these core functions:
+
+### `file_loader()`
+Loads and validates the CSV file(s) specified in configuration.
+
+### `xml_selecter(header)`
+Identifies the metadata block based on the MARKER column and loads the appropriate XML schema.
+
+### `update_metadata(...)`
+Core function that:
+- Parses CSV rows
+- Formats metadata fields (primitive or compound)
+- Pushes updates to Dataverse API
+
+### `primitive_formatter(change_area, row, field)`
+Formats primitive metadata fields (single-level fields).
+
+### `compound_formatter(header, row)`
+Formats compound metadata fields (nested parent-child structures).
+
+### `API_push(field, doi)`
+Sends the formatted metadata to the Dataverse API.
+
+### `check_lock(dataset_id)`
+Checks if a dataset is locked and waits for the lock to clear.
+
+## Testing
+
+Run the test suite:
+
+```bash
+pytest
+```
+
+Or using the Makefile:
+
+```bash
+make test
+```
+
+Tests cover:
+- CSV parsing and validation
+- Field formatting (primitive and compound)
+- API communication (with mocks)
+- Error handling
+
+## Environment Variables
+
+### Required
+- `DATAVERSE_API_TOKEN` - Your Dataverse API token
+- `DATAVERSE_BASE_URL` - Base URL of your Dataverse instance
+- `CSV_FILE_PATHS` - Comma-separated paths to CSV files
+
+### Optional
+- `AUTO_PUBLISH` - Automatically publish datasets after update (default: false)
+- `PUBLISH_TYPE` - Type of publish (major/minor, default: minor)
+- `LOCK_CHECK_INTERVAL` - Seconds between lock checks (default: 10)
+- `MAX_RETRIES` - Maximum API retry attempts (default: 3)
+- `TEST_MODE` - Run without making API calls (default: false)
+- `DRY_RUN` - Log updates without applying them (default: false)
+
+## Troubleshooting
+
+### Common Issues
+
+**"API token invalid"**
+- Verify your API token in `.env`
+- Ensure token has permission to edit datasets
+
+**"Dataset not found"**
+- Check that DOIs in CSV are correct
+- Verify datasets exist in your Dataverse instance
+
+**"CSV file not found"**
+- Check file paths in `CSV_FILE_PATHS`
+- Use absolute paths
+
+**"Field validation error"**
+- Check that values match field types
+- For controlled vocabulary, use allowed terms only
+- Verify compound field formatting
+
+**"Dataset locked"**
+- The script will wait for locks to clear
+- Check Dataverse for ongoing operations
+- Increase `LOCK_CHECK_TIMEOUT` if needed
+
+### Log Files
+
+Logs are written to stdout by default. To save to a file:
+
+```bash
+python universal_field_editor_V2.py > update_log.txt 2>&1
+```
+
+## Best Practices
+
+1. **Test with a single dataset first** - Verify CSV format and API access
+2. **Use dry run mode** - Test without making changes: `DRY_RUN=true`
+3. **Backup data** - Export current metadata before bulk updates
+4. **Small batches** - Process datasets in small groups initially
+5. **Check logs** - Review output for errors and warnings
+6. **Use Excel template** - Refer to `All_Sheets.xlsx` for column structure
+
+## Limitations
+
+- Only processes CSV files (not XLSX directly)
+- Currently supports citation and social sciences metadata blocks
+- Updates existing datasets only (does not create new datasets)
+- API rate limits apply
+
+## Development
+
+### Project Structure
+
+```
+Universal-Field-Editor-DATAVERSE/
+├── universal_field_editor_V2.py    # Main script
+├── All_Sheets.xlsx                 # Excel template
+├── requirements.txt                # Python dependencies
+├── pyproject.toml                  # Poetry configuration
+├── .env.example                    # Environment template
+├── tests/                          # Test suite
+├── Makefile                        # Common commands
+└── README.md                       # This file
+```
+
+### Adding New Features
+
+See [TODO.md](./TODO.md) for planned improvements and development roadmap.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Add tests for new functionality
+4. Run the test suite: `make test`
+5. Submit a pull request
+
+## License
+
+[License information to be added]
+
+## Support
+
+For issues and questions:
+- Check the troubleshooting section
+- Review example CSV files
+- Open an issue on GitHub
+
+## Dataverse API Documentation
+
+- [Dataverse API Guide](https://guides.dataverse.org/en/latest/api/)
+- [pyDataverse Documentation](https://pydataverse.readthedocs.io/)
+- [Dataset Locks API](https://guides.dataverse.org/en/latest/api/native-api.html#dataset-locks)
