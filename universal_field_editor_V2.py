@@ -146,7 +146,7 @@ def update_metadata(latest_version, row, doi, header, directory, master_list, bl
                 # Process primitive fields
                 if field_name in master_list[0]:
                     output = primitive_formatter(change_area, row, field)
-                    print(f'OUTPUT: {output}')
+                    #print(f'OUTPUT: {output}')
 
                     if output == '':
                         field_index += 1
@@ -178,7 +178,8 @@ def update_metadata(latest_version, row, doi, header, directory, master_list, bl
             # Update primitive fields
             if current_field['typeName'] == change_area and current_field['typeName'] in master_list[0]:
                 output = primitive_formatter(change_area, row, current_field)
-                print(f'OUTPUT: {output}')
+                #print(f'OUTPUT: {output}')
+
 
                 if output == '':
                     field_index += 1
