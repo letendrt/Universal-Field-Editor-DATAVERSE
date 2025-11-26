@@ -569,14 +569,18 @@ def xml_selecter(headers):
 
 
 def metadatablock_generator(block):
+"""
+Formats metadata blocks if they are not in the existing dataset record.
 
+Args:
+    block (str): string name of the metadata block
+
+returns metadata block header as a dictionary
+"""
     if block == 'socialscience':
         block_directory = {"socialscience": {"displayName": "Social Science and Humanities Metadata", "name": "socialscience", "fields": []}}
 
         return block_directory
-
-
-
 
 
 
