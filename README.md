@@ -1,12 +1,12 @@
-# Universal Field Editor for Dataverse
+# Universal Field Editor for Dataverse :milky_way::snake:
 
 Bulk edit dataset metadata in Dataverse installations using CSV files.
 
-## Overview
+## :mag_right: Overview
 
 The Universal Field Editor is a Python script that enables batch updates to dataset metadata in Dataverse repositories (including Borealis). Instead of manually editing metadata fields through the web interface, you can use CSV files to update multiple datasets at once. <br> <br>
 
-### What it does
+### :eyes: What it does
 
 - Updates dataset metadata fields via the Dataverse API (through pyDataverse)
 - Supports ALL metadata blocks
@@ -14,14 +14,14 @@ The Universal Field Editor is a Python script that enables batch updates to data
 - Processes multiple datasets from a single CSV file
 - Checks dataset locks and waits for operations to complete before continuing with locked datasets
 
-## Installation
+## :floppy_disk: Installation 
 
-### Requirements
+### :clipboard: Requirements
 
 - Python 3.8+
 - Dataverse account with API access
 
-### Setup
+### :construction: Setup 
 
 1. Clone the repository:
 ```bash
@@ -46,7 +46,7 @@ cp .env.example .env
 
 4. Edit `.env` with your Dataverse credentials and CSV file path.
 
-## Configuration
+## :gear: Configuration
 
 Create a `.env` file with the following variables:
 
@@ -62,7 +62,7 @@ LOG_LEVEL=INFO
 TEST_MODE=false
 ```
 
-### Getting an API Token
+### 🔐🗝️ Getting an API Token 
 
 1. Log into your Dataverse instance
 2. Go to your user profile
