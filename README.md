@@ -4,7 +4,7 @@ Bulk edit dataset metadata in Dataverse installations using CSV files.
 
 ## Overview
 
-The Universal Field Editor is a Python script that enables batch updates to dataset metadata in Dataverse repositories (including Borealis). Instead of manually editing metadata fields through the web interface, you can use CSV files to update multiple datasets at once.
+The Universal Field Editor is a Python script that enables batch updates to dataset metadata in Dataverse repositories (including Borealis). Instead of manually editing metadata fields through the web interface, you can use CSV files to update multiple datasets at once. <br> <br>
 
 ### What it does
 
@@ -12,7 +12,7 @@ The Universal Field Editor is a Python script that enables batch updates to data
 - Supports multiple metadata blocks (citation, social sciences, etc.)
 - Handles primitive fields and compound fields (controlled vocabulary functionalities via primitive fields)
 - Processes multiple datasets from a single CSV file
-- Checks dataset locks and waits for operations to complete (NOT APPLIED YET)
+- Checks dataset locks and waits for operations to complete before continuing with locked datasets
 
 ## Installation
 
@@ -95,6 +95,14 @@ make test
 # Check code style
 make lint
 ```
+## Google Sheets to Create CSV Files
+
+Creating a private copy of the Google Sheet below (instead of editing raw CSV files) has the distinct advanatage of holding scroll down menus containing the permissible terms for each controlled vocabulary fields (except language and country). Once filled out, the sheets can then be exported in CSV format and used by the python script. This approach also has the advantage of avoiding potential diacritics issues when exporting CSV files. Copies of the Google Sheet are unique to each user (unless they, themselves, are shared). Copies of the original spreadsheets can be created and edited by following this link: https://docs.google.com/spreadsheets/d/1NaGVIVGPJxam1c8Hp5KBd1IT-JyQ4IcUlTiCJ5-BbhE/copy <br><br>
+
+This above link was created to facilitate the CSV sheet creation process, though it is not mandatory to use the present tool. The CSV copies and Excel format can be found in a folder above. <br><br>
+
+### :warning: Many of the scroll down menu options for controlled vocabulary fields in the Excel format are broken and do not work. :warning:
+
 
 ## CSV Format
 
