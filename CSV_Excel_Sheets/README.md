@@ -67,12 +67,9 @@ The first column must be the dataset identifier. Can be in either format:
 
 ### Marker Column
 
-Each CSV file must have a special marker column to identify the metadata block:
-
-- `MARKER 1` = Citation metadata block
-- `MARKER 2` = Social Sciences and Humanities metadata block
-
+Each CSV file must have a special marker column to identify the metadata block.
 This column should be placed after all data columns.
+:warning: DO NOT REMOVE MARKER COLUMNS :warning:
 
 ### Example CSV Structure
 
