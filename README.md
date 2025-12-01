@@ -69,9 +69,9 @@ TEST_MODE=false
 3. Click "API Token"
 4. Generate or copy your existing token
 
-## Usage
+## :crystal_ball: Usage
 
-### Basic Usage
+### :pushpin: Basic Usage
 
 1. Create a CSV file with your metadata updates (see README.md in CSV_Excel_Sheets folder above)
 2. Update the `CSV_FILE_PATHS` in your `.env` file (the script can also be run from any IDE or virtual environment like Google Collaboratory or Jupyter Notebook)
@@ -81,7 +81,7 @@ TEST_MODE=false
 python universal_field_editor_V2.py
 ```
 
-### Using the Makefile
+### :file_folder: Using the Makefile
 
 Common operations are available through the Makefile:
 
@@ -96,7 +96,7 @@ make test
 make lint
 ```
 
-## Functions
+## 📊 Functions
 
 The script includes these core functions:
 
@@ -124,7 +124,7 @@ Sends the formatted metadata to the Dataverse API.
 ### `check_lock(dataset_id)`
 Checks if a dataset is locked and waits for the lock to clear.
 
-## Testing
+## 📝 Testing
 
 Run the test suite:
 
