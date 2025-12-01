@@ -8,8 +8,8 @@ The Universal Field Editor is a Python script that enables batch updates to data
 
 ### What it does
 
-- Updates dataset metadata fields via the Dataverse API
-- Supports multiple metadata blocks (citation, social sciences, etc.)
+- Updates dataset metadata fields via the Dataverse API (through pyDataverse)
+- Supports ALL metadata blocks
 - Handles primitive fields and compound fields (controlled vocabulary functionalities via primitive fields)
 - Processes multiple datasets from a single CSV file
 - Checks dataset locks and waits for operations to complete before continuing with locked datasets
