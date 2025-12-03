@@ -185,7 +185,7 @@ Tests cover:
 - Check Dataverse for ongoing operations
 - Increase `LOCK_CHECK_TIMEOUT` if needed
 
-### Log Files
+### 🗃️ Log Files
 
 Logs are written to stdout by default. To save to a file:
 
@@ -193,7 +193,7 @@ Logs are written to stdout by default. To save to a file:
 python universal_field_editor_V2.py > update_log.txt 2>&1
 ```
 
-## Best Practices
+## 📈 Best Practices
 
 1. **Test with a single dataset first** - Verify CSV format and API access
 2. **Use dry run mode** - Test without making changes: `DRY_RUN=true`
@@ -202,16 +202,16 @@ python universal_field_editor_V2.py > update_log.txt 2>&1
 5. **Check logs** - Review output for errors and warnings
 6. **Use Excel template** - Refer to `All_Sheets.xlsx` for column structure
 
-## Limitations
+## 📉 Limitations
 
 - Only processes CSV files (not XLSX directly)
 - Currently supports citation and social sciences metadata blocks
 - Updates existing datasets only (does not create new datasets)
 - API rate limits apply
 
-## Development
+## :incoming_envelope: Development
 
-### Project Structure
+### :bank: Project Structure
 
 ```
 Universal-Field-Editor-DATAVERSE/
@@ -225,11 +225,11 @@ Universal-Field-Editor-DATAVERSE/
 └── README.md                       # This file
 ```
 
-### Adding New Features
+### 🪜 Adding New Features
 
 See [TODO.md](./TODO.md) for planned improvements and development roadmap.
 
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -237,18 +237,18 @@ See [TODO.md](./TODO.md) for planned improvements and development roadmap.
 4. Run the test suite: `make test`
 5. Submit a pull request
 
-## License
+## ⚖️ License
 
 [License information to be added]
 
-## Support
+## 🏗️ Support
 
 For issues and questions:
 - Check the troubleshooting section
 - Review example CSV files
 - Open an issue on GitHub
 
-## Dataverse API Documentation
+## 📃 Dataverse API Documentation
 
 - [Dataverse API Guide](https://guides.dataverse.org/en/latest/api/)
 - [pyDataverse Documentation](https://pydataverse.readthedocs.io/)
