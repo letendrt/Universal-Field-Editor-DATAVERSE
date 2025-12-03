@@ -144,7 +144,7 @@ Tests cover:
 - API communication (with mocks)
 - Error handling
 
-## Environment Variables
+## :herb: Environment Variables
 
 ### Required
 - `DATAVERSE_API_TOKEN` - Your Dataverse API token
@@ -159,9 +159,9 @@ Tests cover:
 - `TEST_MODE` - Run without making API calls (default: false)
 - `DRY_RUN` - Log updates without applying them (default: false)
 
-## Troubleshooting
+## :microscope: Troubleshooting
 
-### Common Issues
+### :triangular_flag_on_post: Common Issues
 
 **"API token invalid"**
 - Verify your API token in `.env`
