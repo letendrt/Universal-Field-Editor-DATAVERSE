@@ -70,7 +70,7 @@ The first column must be the dataset identifier. Can be in either format:
 Each CSV file must have a special marker column to identify the metadata block.
 This column should be placed after all data columns. <br>
 
-:warning: DO NOT REMOVE MARKER COLUMNS :warning:
+:warning: DO NOT REMOVE MARKER COLUMNS (The last column of each sheet) :warning:
 
 ### Example CSV Structure
 
