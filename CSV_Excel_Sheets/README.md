@@ -4,7 +4,7 @@ Creating a private copy of the Google Sheet below (instead of editing raw CSV fi
 
 This above link was created to facilitate the CSV sheet creation process, though it is not mandatory to use the present tool. The CSV copies and Excel format can be found in a folder above. <br><br>
 
-### :warning: Many of the scroll down menu options for controlled vocabulary fields in the Excel format are broken and do not work. :warning:
+### :warning: Many of the scroll down menu options for controlled vocabulary fields in the Excel format are broken and do not work. Create a copy of the Google Sheet above to have all functionalities :warning:
 
 
 ## CSV Format
