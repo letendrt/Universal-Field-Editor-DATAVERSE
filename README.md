@@ -74,7 +74,7 @@ TEST_MODE=false
 ### :pushpin: Basic Usage
 
 1. Create a CSV file with your metadata updates (see README.md in CSV_Excel_Sheets folder above)
-2. Update the `CSV_FILE_PATHS` in your `.env` file (the script can also be run from any IDE or virtual environment like Google Collaboratory or Jupyter Notebook)
+2. Update the `CSV_FILE_PATHS` in your `.env` file. Note that the script can also be run from any IDE, but not through Google Colab or Jupyter Notebook (unless it is a local iteration of Jupyter)
 3. Run the script:
 
 ```bash
