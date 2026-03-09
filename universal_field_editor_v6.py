@@ -232,7 +232,8 @@ def update_terms_of_use(complete_record, latest_version, row, doi, header):
     #print(main_block)
     complete_record['data']['latestVersion'] = main_block
     print(complete_record)
-            
+    
+    main_block.pop("files")  
     
     API_push_terms_of_use(main_block, doi)
 
