@@ -49,7 +49,26 @@ This was done to prevent clutter in a singular, massive sheet. You only need to 
   <kbd><img width="321" height="32" alt="image" src="https://github.com/user-attachments/assets/320ce39e-85a6-4329-b738-4c5dac9fb8ab" /></kbd>
   <li><b>Black</b>: Indicates the kind of sheet being processed by the python script - do not remove this column from your CSV sheet</li>
   <kbd><img width="227" height="40" alt="image" src="https://github.com/user-attachments/assets/814f1a7c-1e2a-4361-8646-8c0ca7971e9c" /></kbd>
-
-
-  
 </ul>
+
+⚠️The script processes fields differently depending on whether a primitive or compound field is being added to the XML record. As such, it is important that you pay attention to both the metadata field type being edited, and the following instructions on how to fill in each kind of field type⚠️
+
+3) 🟨Yellow Fields: DOI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
