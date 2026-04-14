@@ -8,7 +8,7 @@ The Universal Field Editor is a Python script that enables batch updates to data
 4) Supports ALL metadata blocks and ALL metadata fields (last update - April 2026).
 
 ## Minimum Python Requirements 🐍🔧
-1) Local IDE (Jupyter, Wing, PyCharm, etc.)
+1) Local IDE (Jupyter, Wing, PyCharm, etc. - Borealis no longer supports remote/virtual IDEs like Google Colab or web-based Jupyter)
 2) Minimum python version: 3.6+
 
 ## File Requirements 📂🔧
