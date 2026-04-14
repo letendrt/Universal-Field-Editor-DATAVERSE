@@ -36,3 +36,16 @@ The Universal Field Editor is a Python script that enables batch updates to data
 </ul>
 
 This was done to prevent clutter in a singular, massive sheet. You only need to edit the sheets for the metadatablocks you want to edit. In otherwords, if you are not bringing any modifications to the 'Journal' block, you can just ignore it!
+
+2) Next, bring your attention to the column headers. You'll quickly notice that they are colour coded. There are 5 possible types of headers on the sheets. Each colour denotes a different role or information architecture in Dataverse. It is of paramount importance that users understand what each header type indicates. We will then discuss how to fill out fields of each type.
+<ul>
+  <li><b>Yellow</b>: Always indicates the dataset DOI</li>
+  <kbd><img width="224" height="39" alt="image" src="https://github.com/user-attachments/assets/9552c770-8036-4378-b8c6-3abdb80fa3f2" /></kbd>
+  <li><b>Green</b>: Indicates PRIMITIVE metadata fields (no children fields)</li>
+  <kbd><img width="407" height="39" alt="image" src="https://github.com/user-attachments/assets/300eac4d-8d02-4420-871a-277485f8b408" /></kbd>
+  <li><b>Red</b>: Indicates COMPOUND metadata fields (fields that have children fields)</li>
+  <kbd><img width="470" height="38" alt="image" src="https://github.com/user-attachments/assets/5bc30a0c-2c78-44ec-9b01-4aff4a6c1975" /></kbd>
+
+
+  
+</ul>
