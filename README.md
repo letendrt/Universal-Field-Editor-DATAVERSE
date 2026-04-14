@@ -63,7 +63,7 @@ This was done to prevent clutter in a singular, massive sheet. You only need to 
 This field simply requires that users copy and paste the dataset doi in the column cell. Note that each row in the Google Sheet represents a different dataset. In this case, the DOI can be inserted in "https" format (e.g., https://doi.org/10.80240/FK2/LDRCTM) or in "doi:" format (e.g., doi:10.80240/FK2/LDRCTM). The script will automatically convert the doi format to make the API calls possible. 
 
 Example:<br>
-<kbd><img width="315" height="177" alt="image" src="https://github.com/user-attachments/assets/1f86e3a9-fca9-4368-ad79-7f3362715d9d" /></kbd>
+<kbd><img width="313" height="179" alt="image" src="https://github.com/user-attachments/assets/f48389f3-a9d4-41bd-b760-c9a1dc8e7ab8" /></kbd>
 <br><br>
 
 ### 🟢Green Fields: Primitive Fields🟢
@@ -73,7 +73,10 @@ Some fields can be repeated (for instance, you can have more than one alternativ
 
 Examples:<br>
 <kbd><img width="658" height="153" alt="image" src="https://github.com/user-attachments/assets/0283fd40-3315-4fba-bb53-4eb4ee1710f9" /></kbd><br>
-<kbd><img width="332" height="142" alt="image" src="https://github.com/user-attachments/assets/b5621ad6-01d0-4b14-83bc-22fab950bc76" /></kbd>
+<kbd><img width="332" height="142" alt="image" src="https://github.com/user-attachments/assets/b5621ad6-01d0-4b14-83bc-22fab950bc76" /></kbd><br>
+
+### 🔴Red Fields: Compound Fields🔴
+These fields
 
 
 
