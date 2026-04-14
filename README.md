@@ -35,7 +35,7 @@ The Universal Field Editor is a Python script that enables batch updates to data
   <li>3D Objects</li>
 </ul>
 
-This was done to prevent clutter in a singular, massive sheet. You only need to edit the sheets for the metadatablocks you want to edit. In otherwords, if you are not bringing any modifications to the 'Journal' block, you can just ignore it!
+This was done to prevent clutter in a singular, massive sheet. You only need to edit the sheets for the metadata blocks you want to edit. In otherwords, if you are not bringing any modifications to the 'Journal' block, you can just ignore it!
 
 2) Next, bring your attention to the column headers. You'll quickly notice that they are colour coded. There are 5 possible types of headers on the sheets. Each colour denotes a different role or information architecture in Dataverse. It is of paramount importance that users understand what each header type indicates. We will then discuss how to fill out fields of each type.
 <ul>
