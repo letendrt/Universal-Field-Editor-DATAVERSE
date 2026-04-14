@@ -47,6 +47,8 @@ This was done to prevent clutter in a singular, massive sheet. You only need to 
   <kbd><img width="470" height="38" alt="image" src="https://github.com/user-attachments/assets/5bc30a0c-2c78-44ec-9b01-4aff4a6c1975" /></kbd>
   <li><b>Blue</b>: Indicates CONTROLLED VOCABULARY metadata fields (fields that can only be filled with exact pre-vetted values)</li>
   <kbd><img width="321" height="32" alt="image" src="https://github.com/user-attachments/assets/320ce39e-85a6-4329-b738-4c5dac9fb8ab" /></kbd>
+  <li><b>Black</b>: Indicates the kind of sheet being processed by the python script - do not remove this column from your CSV sheet</li>
+  <kbd><img width="227" height="40" alt="image" src="https://github.com/user-attachments/assets/814f1a7c-1e2a-4361-8646-8c0ca7971e9c" /></kbd>
 
 
   
