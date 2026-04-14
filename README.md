@@ -69,8 +69,11 @@ Example:<br>
 ### 🟢Green Fields: Primitive Fields🟢
 These fields require that users enter the the value they wish to integrate in their dataset metadata record. It's that simple. Note that some entries require integers instead of text strings (mostly in geospatial data) - You'll have to familiarise yourself with your own datasets before bringing forth substantial modifications. You can leave a field empty if you do not wish to add or edit a field. 
 
-Example:<br>
-<kbd><img width="685" height="143" alt="image" src="https://github.com/user-attachments/assets/4013dc1c-2596-41d9-87c3-b6ef45ed55dd" /></kbd>
+Some fields can be repeated (for instance, you can have more than one alternative title, but you cannot have more than one dataset title). If you want the script to create more than one metadata field in Borealis, use a '+' sign between your entries! This will instruct the script to input both entries in two different metadata fields of the same type (see second screenshot below).
+
+Examples:<br>
+<kbd><img width="658" height="153" alt="image" src="https://github.com/user-attachments/assets/0283fd40-3315-4fba-bb53-4eb4ee1710f9" /></kbd><br>
+<kbd><img width="332" height="142" alt="image" src="https://github.com/user-attachments/assets/b5621ad6-01d0-4b14-83bc-22fab950bc76" /></kbd>
 
 
 
