@@ -77,7 +77,7 @@ Examples:<br>
 <br>
 
 ### 🔴Red Fields: Compound Fields🔴
-These fields
+These fields are the most challenging to grasp (but it's all very relative, since they're not too difficult at all). Here, the column names are of great importance. There are 3 important parts to the column name: the column marker, the parent field, and the children field. 
 
 
 
