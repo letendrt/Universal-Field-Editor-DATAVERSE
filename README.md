@@ -37,6 +37,8 @@ The Universal Field Editor is a Python script that enables batch updates to data
 
 This was done to prevent clutter in a singular, massive sheet. You only need to edit the sheets for the metadata blocks you want to edit. In otherwords, if you are not bringing any modifications to the 'Journal' block, you can just ignore it!
 
+### DO NOT CHANGE THE NAMES OF THE COLUMNS AND DO NOT CHANGE THE NAMES OF THE SHEETS⚠️🚧
+
 2) Next, bring your attention to the column headers. You'll quickly notice that they are colour coded. There are 5 possible types of headers on the sheets. Each colour denotes a different role or information architecture in Dataverse. It is of paramount importance that users understand what each header type indicates. We will then discuss how to fill out fields of each type.
 <ul>
   <li><b>Yellow</b>: Always indicates the dataset DOI</li>
@@ -53,12 +55,22 @@ This was done to prevent clutter in a singular, massive sheet. You only need to 
 
 ⚠️The script processes inputs differently depending on whether a primitive or compound field is being added, edited, or removed. <br>
 ⚠️It is important that you pay attention to the following instructions on how to fill in each kind of field type.
-<br>
-<br>
+
+### DO NOT CHANGE THE NAMES OF THE COLUMNS AND DO NOT CHANGE THE NAMES OF THE SHEETS⚠️🚧
+
+
 ### 🟡Yellow Fields: Direct Object Identifier (doi)🟡
 This field simply requires that users copy and paste the dataset doi in the column cell. Note that each row in the Google Sheet represents a different dataset. In this case, the DOI can be inserted in "https" format (e.g., https://doi.org/10.80240/FK2/LDRCTM) or in "doi:" format (e.g., doi:10.80240/FK2/LDRCTM). The script will automatically convert the doi format to make the API calls possible. 
 
+Example:<br>
+<kbd><img width="315" height="177" alt="image" src="https://github.com/user-attachments/assets/1f86e3a9-fca9-4368-ad79-7f3362715d9d" /></kbd>
+<br><br>
+
 ### 🟢Green Fields: Primitive Fields🟢
+These fields require that users enter the the value they wish to integrate in their dataset metadata record. It's that simple. Note that some entries require integers instead of text strings (mostly in geospatial data) - You'll have to familiarise yourself with your own datasets before bringing forth substantial modifications. You can leave a field empty if you do not wish to add or edit a field. 
+
+Example:<br>
+<kbd><img width="685" height="143" alt="image" src="https://github.com/user-attachments/assets/4013dc1c-2596-41d9-87c3-b6ef45ed55dd" /></kbd>
 
 
 
