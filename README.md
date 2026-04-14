@@ -16,4 +16,19 @@ The Universal Field Editor is a Python script that enables batch updates to data
 2) Download the [universal_field_editor.py](https://github.com/letendrt/Universal-Field-Editor-DATAVERSE/blob/main/universal_field_editor_v6.1.py) file.
 
 ## Understanding the Google Sheet Format
-1) Once a copy is created, users will be greeted by the "Citation" tab of the document. Each metadata block (Citation, Terms of Use, Social Science and Humanities, Geospatial, Astronomy and Astrophysics, Life Sciences, Journal, Computational Workflow, and 3D Objects) has its own sheet; this was done to prevent clutter in a singular, massive sheet. 
+1) Once a copy is created, users will be greeted by the "Citation" tab of the document. Note, howevevr, that there are 9 sheets - one for each Borealis metadata block:
+<kbd><img width="1435" height="78" alt="image" src="https://github.com/user-attachments/assets/378fe4bf-8e14-4309-a30b-6a2914b686d6" /></kbd>
+
+<ul>
+  <li>Citation</li>
+  <li>Terms of Use</li>
+  <li>Social Science and Humanities</li>
+  <li>Geospatial</li>
+  <li>Astronomy and Astrophysics</li>
+  <li>Life Sciences</li>
+  <li>Journal</li>
+  <li>Computational Workflow</li>
+  <li>3D Objects</li>
+</ul>
+
+This was done to prevent clutter in a singular, massive sheet. You only need to edit the sheets for the metadatablocks you want to edit. In otherwords, if you are not bringing any modifications to the 'Journal' block, you can just ignore it!
