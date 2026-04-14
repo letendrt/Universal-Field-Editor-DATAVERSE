@@ -77,9 +77,13 @@ Examples:<br>
 <br>
 
 ### 🔴Red Fields: Compound Fields🔴
-These fields are the most challenging to grasp (but it's all very relative, since they're not too difficult at all). Here, the column names are of great importance. There are 3 important parts to the column name: the column marker, the parent field, and the children field. 
+These fields are the most challenging to grasp (but it's all very relative, since they're not too difficult at all). Here, the column names are of great importance. There are 3 important parts to the column name: the column marker (before the colon), the parent field (before the first semi-colon), and the children fields (after the first semi-colon). In the example below, 'Keyword' is the column marker, 'keywordValue' is the parent field, and 'keywordVocabulary' is the child field.
 
+<kbd><img width="521" height="86" alt="image" src="https://github.com/user-attachments/assets/1ec3fe00-4119-4e43-ae52-2439e9627d95" /></kbd>
 
+The structure of your row entry must match the column name pattern after the colon. In the below example, for instance, we are adding a singular keyword and its thesaurus of origin. The keyword in this case is 'Corn' (same position as parent node 'keywordValue'), and its thesaurus is 'Crop Thesaurus' (same position as 'keywordVocabulary'). 
+
+<kbd><img width="440" height="88" alt="image" src="https://github.com/user-attachments/assets/f3f5053f-0a2e-4a4b-b0b3-0c647371c9bf" /></kbd>
 
 
 
