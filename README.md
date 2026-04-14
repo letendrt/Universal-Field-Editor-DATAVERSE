@@ -11,4 +11,5 @@ The Universal Field Editor is a Python script that enables batch updates to data
 2) Minimum python version: 3.6+
 
 ## File Requirements 📂🔧
-1) Create a copy of the Universal Field Editor Google Sheet (note that while it is possible to simply download the individual CSV sheets to do so, the Google Sheet is equipped to handle fields that are restricted to controlled vocabulary terms; as such, creating a personal copy of the CSV sheet will provide a better overall user experience). 
+1) Create a copy of the [Universal Field Editor Google Sheet](https://docs.google.com/spreadsheets/d/1NaGVIVGPJxam1c8Hp5KBd1IT-JyQ4IcUlTiCJ5-BbhE/copy).<br><br>
+⚠️⚠️ Note that while it is possible to simply download the individual CSV sheets to do use the Universal Field Editor script, the Google Sheet is equipped to handle fields that are restricted to controlled vocabulary terms via predefined drop down menus. As such, creating a personal copy of the CSV sheet will provide a better overall user experience. Once filled out, the sheets can then be exported in CSV format and used by the python script. This approach also has the advantage of avoiding potential character diacritics issues when exporting CSV files. Copies of the Google Sheet are unique to each user (unless they, themselves, are shared).
