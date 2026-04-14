@@ -53,17 +53,12 @@ This was done to prevent clutter in a singular, massive sheet. You only need to 
 
 ⚠️The script processes inputs differently depending on whether a primitive or compound field is being added, edited, or removed. <br>
 ⚠️It is important that you pay attention to the following instructions on how to fill in each kind of field type.
-
-
-
-
-
-
-
-
-3) <b>🟨Yellow Fields: Direct Object Identifier (doi)</b><br>
+<br>
+<br>
+### 🟡Yellow Fields: Direct Object Identifier (doi)🟡
 This field simply requires that users copy and paste the dataset doi in the column cell. Note that each row in the Google Sheet represents a different dataset. In this case, the DOI can be inserted in "https" format (e.g., https://doi.org/10.80240/FK2/LDRCTM) or in "doi:" format (e.g., doi:10.80240/FK2/LDRCTM). The script will automatically convert the doi format to make the API calls possible. 
 
+### 🟢Green Fields: Primitive Fields🟢
 
 
 
