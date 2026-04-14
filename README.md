@@ -74,6 +74,7 @@ Some fields can be repeated (for instance, you can have more than one alternativ
 Examples:<br>
 <kbd><img width="658" height="153" alt="image" src="https://github.com/user-attachments/assets/0283fd40-3315-4fba-bb53-4eb4ee1710f9" /></kbd><br>
 <kbd><img width="332" height="142" alt="image" src="https://github.com/user-attachments/assets/b5621ad6-01d0-4b14-83bc-22fab950bc76" /></kbd><br>
+<br>
 
 ### 🔴Red Fields: Compound Fields🔴
 These fields
