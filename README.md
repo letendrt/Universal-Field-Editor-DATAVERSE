@@ -89,9 +89,10 @@ The example below is how you would input more than one keyword, both of which ha
 
 <kbd><img width="442" height="90" alt="image" src="https://github.com/user-attachments/assets/8ed61df4-c800-441f-b771-f33a28cb6e33" /></kbd>
 
-But what if your keyword does not have a thesuaurs of reference or isn't extracted from a controlled vocabulary? In this case, you would simply enter your keyword value, a semi-colon, and then continue on to your next keyword. You MUST do so for each child node that is not filled. Here is an example of how this is done:
+But what if your keyword does not have a thesuaurs of reference or isn't extracted from a controlled vocabulary? In this case, you would simply enter your keyword value, a semi-colon, and then continue on to your next keyword. You MUST do so for each child node that is not filled. The first screenshot below is how this is done when there is only one child field, and the second screenshot is for when there is three children fields:
 
-<kbd><img width="439" height="99" alt="image" src="https://github.com/user-attachments/assets/2d31c77b-3b66-4459-b13e-b28480da36f9" /></kbd>
+<kbd><img width="439" height="99" alt="image" src="https://github.com/user-attachments/assets/2d31c77b-3b66-4459-b13e-b28480da36f9" /></kbd><br>
+<kbd><img width="670" height="114" alt="image" src="https://github.com/user-attachments/assets/984837bb-7f83-4c8b-910a-bfe930514d02" /></kbd>
 
 
 
