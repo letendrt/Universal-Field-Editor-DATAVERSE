@@ -51,10 +51,18 @@ This was done to prevent clutter in a singular, massive sheet. You only need to 
   <kbd><img width="227" height="40" alt="image" src="https://github.com/user-attachments/assets/814f1a7c-1e2a-4361-8646-8c0ca7971e9c" /></kbd>
 </ul>
 
-⚠️The script processes fields differently depending on whether a primitive or compound field is being added to the XML record. As such, it is important that you pay attention to both the metadata field type being edited, and the following instructions on how to fill in each kind of field type⚠️
+⚠️The script processes inputs differently depending on whether a primitive or compound field is being added, edited, or removed. <br>
+⚠️It is important that you pay attention to the following instructions on how to fill in each kind of field type.
 
-3) 🟨Yellow Fields: DOI
 
+
+
+
+
+
+
+3) <b>🟨Yellow Fields: Direct Object Identifier (doi)</b><br>
+This field simply requires that users copy and paste the dataset doi in the column cell. Note that each row in the Google Sheet represents a different dataset. In this case, the DOI can be inserted in "https" format (e.g., https://doi.org/10.80240/FK2/LDRCTM) or in "doi:" format (e.g., doi:10.80240/FK2/LDRCTM). The script will automatically convert the doi format to make the API calls possible. 
 
 
 
