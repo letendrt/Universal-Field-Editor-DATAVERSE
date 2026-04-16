@@ -19,7 +19,7 @@ The Universal Field Editor is a Python script that enables batch updates to data
 
 2) Download the [universal_field_editor.py](https://github.com/letendrt/Universal-Field-Editor-DATAVERSE/blob/main/universal_field_editor_v6.1.py) file.
 
-## Understanding the Google Sheet Format
+## Understanding the Google Sheet Format 💡🦖
 1) Once a copy is created, users will be greeted by the "Citation" tab of the document. Note, howevevr, that there are 9 sheets - one for each Borealis metadata block:
 <kbd><img width="1435" height="78" alt="image" src="https://github.com/user-attachments/assets/378fe4bf-8e14-4309-a30b-6a2914b686d6" /></kbd>
 
