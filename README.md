@@ -106,17 +106,19 @@ Controlled vocabulary fields are the easiest to handle since most controlled voc
 Example:<br>
 <kbd><img width="901" height="783" alt="image" src="https://github.com/user-attachments/assets/234700de-4bf0-4d61-9b80-678aeee0159c" /></kbd>
 
-## Organising files 💫📂
+## Organising files 💫📂 (optional step)
 1) Once you have finished formatting your Google Sheets, download each one in CSV format and place them in a dedicated folder on your device. The naming convention of the files does not matter - though they will become important in the next section (Running the python script 🐍📜).
 2) Download the most recent version of the python script (universal_field_editor_v6.1.py - version number is privy to changes), and place it in the same folder as the CSV sheets above.
 
  ⚠️File location does not actually matter - file paths will be used to retrieve the CSV files⚠️
 
-
-
-
 ## Running the python script 🐍📜
-1) 
+Before running the script, you'll have to edit a few parameters in the python file. This is easy and doesn't require any know-how. Just know that you need to have a local python IDE. You may also need to install python libraries (if you don't know how to do so, follow this useful [python module installation](https://www.geeksforgeeks.org/installation-guide/how-to-install-a-python-module/) guide by Geeks for Geeks).<br><br>
+
+1) Open the python file in your IDE and navigate to the 'CONFIGURATION SETTINGS' section (line 31).
+
+    <kbd><img width="770" height="103" alt="image" src="https://github.com/user-attachments/assets/8563d358-51a6-4948-ba9d-c2362e358e39" /></kbd>
+ 
 
 
 
