@@ -97,7 +97,7 @@ But what if your keyword does not have a thesuaurs of reference or isn't extract
 
 You now know how to populate the cells of compound columns! Here are some important details and cases to keep in mind:
 
-<li>Some Compound fields only have one child - these do not require the use of semi-colons. They behave like primitive fields (see xample below) </li>
+<li>Some Compound fields only have one child - these do not require the use of semi-colons. They behave like primitive fields (see example below) </li>
 <kbd><img width="406" height="94" alt="image" src="https://github.com/user-attachments/assets/71eb82bb-da5f-475d-9e22-9a269f7599bd" /></kbd>
 
 
