@@ -123,7 +123,7 @@ Before running the script, you'll have to edit a few parameters in the python fi
 
    <kbd><img width="952" height="379" alt="image" src="https://github.com/user-attachments/assets/a0e19765-8a84-472a-8c4e-7bda2b18e806" /></kbd>
 
- 
+ 3) Fetch your Borealis/Dataverse API key and paste it in the script placeholder. 
 
 
 
