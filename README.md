@@ -89,11 +89,11 @@ The example below is how you would input more than one keyword, both of which ha
 
 <kbd><img width="442" height="90" alt="image" src="https://github.com/user-attachments/assets/8ed61df4-c800-441f-b771-f33a28cb6e33" /></kbd>
 
-But what if your keyword does not have a thesuaurs of reference or isn't extracted from a controlled vocabulary? In this case, you would simply enter your keyword value, a semi-colon, and then continue on to your next keyword. You MUST do so for each child node that is not filled. The first screenshot below is how this is done when there is only two children. The second screenshot is for when there is four children. The third is when there are four children, but only the first and third fields are populated (note that we still need to include the unused field with a semi-colon):
+But what if your keyword does not have a thesuaurs of reference or isn't extracted from a controlled vocabulary? In this case, you would simply enter your keyword value, a semi-colon, and then continue on to your next keyword. You MUST do so for each child node that is not filled. The first screenshot below is how this is done when there is only two children. The second screenshot is for when there is four children. The third is when there are four children, but only the first and third fields are populated (note that we still need to include the unused fields by inserting their semi-colon):
 
 <kbd><img width="439" height="99" alt="image" src="https://github.com/user-attachments/assets/2d31c77b-3b66-4459-b13e-b28480da36f9" /></kbd><br>
 <kbd><img width="670" height="114" alt="image" src="https://github.com/user-attachments/assets/984837bb-7f83-4c8b-910a-bfe930514d02" /></kbd><br>
-<kbd><img width="656" height="93" alt="image" src="https://github.com/user-attachments/assets/2ce6c2de-bdde-4904-8e4d-6524747f4775" /></kbd>
+<kbd><img width="672" height="91" alt="image" src="https://github.com/user-attachments/assets/c2b8e083-6748-4db7-88a0-b2b0bf8f42c0" /></kbd>
 
 You now know how to populate the cells of compound columns! Here are some important details and cases to keep in mind:
 
