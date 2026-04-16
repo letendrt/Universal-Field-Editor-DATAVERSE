@@ -50,7 +50,7 @@ file_directory = ['Insert/Path/To/File.csv']
 
 # API credentials and endpoint configuration
 api_token_origin = "API_KEY_HERE"           # Dataverse API token
-url_base_origin = 'BASE_URL_HERE'           # Dataverse base URL (e.g., https://demo.borealisdata.ca)
+url_base_origin = 'https://borealisdata.ca'           # Dataverse base demo URL (e.g., https://demo.borealisdata.ca)
 
 
 # API headers and client initialization
