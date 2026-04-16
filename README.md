@@ -98,8 +98,13 @@ But what if your keyword does not have a thesuaurs of reference or isn't extract
 You now know how to populate the cells of compound columns! Here are some important details and cases to keep in mind:
 
 <li>Some Compound fields only have one child - these do not require the use of semi-colons. They behave like primitive fields (see example below) </li>
-<kbd><img width="406" height="94" alt="image" src="https://github.com/user-attachments/assets/71eb82bb-da5f-475d-9e22-9a269f7599bd" /></kbd>
+<kbd><img width="406" height="94" alt="image" src="https://github.com/user-attachments/assets/71eb82bb-da5f-475d-9e22-9a269f7599bd" /></kbd><br><br>
 
+### 🔵Blue Fields: Controlled Vocabulary🔵
+Controlled vocabulary fields are the easiest to handle since most controlled vocabulary fields in the Google Sheet already include vetted entries in column drop down menus. For the exception of a few fields (notably the 'language' field on the citation sheet), users can simply select the pre-vetted option of their choice. Not using the included fields will likely result in errors once submitted to Borealis/Dataverse through the python script.
+
+Example:<br>
+<kbd><img width="901" height="783" alt="image" src="https://github.com/user-attachments/assets/234700de-4bf0-4d61-9b80-678aeee0159c" /></kbd>
 
 
 
