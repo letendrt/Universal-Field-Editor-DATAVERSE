@@ -106,6 +106,15 @@ Controlled vocabulary fields are the easiest to handle since most controlled voc
 Example:<br>
 <kbd><img width="901" height="783" alt="image" src="https://github.com/user-attachments/assets/234700de-4bf0-4d61-9b80-678aeee0159c" /></kbd>
 
+## Removing (without replacing) values from the existing dataset records ↪️🗑️💯❗
+
+
+
+
+
+
+
+
 ## Organising files 💫📂 (optional step)
 1) Once you have finished formatting your Google Sheets, download each one in CSV format and place them in a dedicated folder on your device. The naming convention of the files does not matter - though they will become important in the next section (Running the python script 🐍📜).
 2) Download the most recent version of the python script (universal_field_editor_v6.2.py - version number is privy to changes), and place it in the same folder as the CSV sheets above.
