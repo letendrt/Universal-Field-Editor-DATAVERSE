@@ -25,7 +25,7 @@ The Universal Field Editor is a Python script that enables batch updates to data
 
 <ul>
   <li>Citation</li>
-  <li>Terms of Use</li>
+  <li>Terms of Use (only for custom terms)</li>
   <li>Social Science and Humanities</li>
   <li>Geospatial</li>
   <li>Astronomy and Astrophysics</li>
