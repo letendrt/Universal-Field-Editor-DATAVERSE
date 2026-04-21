@@ -1,5 +1,5 @@
 # Universal Field Editor for Dataverse :milky_way::snake:
-The Universal Field Editor is a Python script that enables batch updates to dataset metadata in Dataverse repositories (including Borealis). Instead of manually editing metadata fields through the web interface, you can use CSV files to update multiple datasets at once.
+The Universal Field Editor is a Python script that enables batch updates to dataset metadata in Dataverse repositories (including Borealis). Instead of manually editing metadata fields through the web interface or clunky shell environments, you can use CSV files to update multiple datasets at once.
 
 ## Code Purpose 🤔❓
 1) Streamline the metadata updating process for researchers and data curators that may have minimal python knowledge;
