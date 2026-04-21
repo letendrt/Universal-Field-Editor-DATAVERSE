@@ -6,6 +6,7 @@ The Universal Field Editor is a Python script that enables batch updates to data
 2) Assist seasoned professionals in curating their entire collections in a time efficient manner;
 3) Updates dataset metadata fields via the Dataverse API (through [pyDataverse](https://pydataverse.readthedocs.io/en/latest/index.html));
 4) Supports ALL metadata blocks and ALL metadata fields (last update - April 2026).
+5) Supports Custom Terms of Use edits.
 
 ## Minimum Python Requirements 🐍🔧
 1) Local IDE (Jupyter, Wing, PyCharm, etc.)
