@@ -1,26 +1,26 @@
-# Universal Field Editor for Dataverse :milky_way::snake:
+# Universal Field Editor for Dataverse
 The Universal Field Editor is a Python script that enables batch updates to dataset metadata in Dataverse repositories (including Borealis). Instead of manually editing metadata fields through the web interface or clunky shell environments, you can use CSV files to update multiple datasets at once.
 
-## Code Purpose 🤔❓
+## Code Purpose
 1) Streamline the metadata updating process for researchers and data curators that may have minimal python knowledge;
 2) Assist seasoned professionals in curating their entire collections in a time efficient manner;
 3) Updates dataset metadata fields via the Dataverse API (through [pyDataverse](https://pydataverse.readthedocs.io/en/latest/index.html));
 4) Supports ALL metadata blocks and ALL metadata fields (last update - April 2026).
 5) Supports Custom Terms of Use edits.
 
-## Minimum Python Requirements 🐍🔧
+## Minimum Python Requirements
 1) Local IDE (Jupyter, Wing, PyCharm, etc.)
 2) Minimum python version: 3.6+
 
-⚠️Note that Borealis does not support web-based IDEs⚠️
+⚠️ Note that Borealis does not support web-based IDEs
 
-## File Requirements 📂🔧
+## File Requirements
 1) Create a copy of the [Universal Field Editor Google Sheet](https://docs.google.com/spreadsheets/d/1NaGVIVGPJxam1c8Hp5KBd1IT-JyQ4IcUlTiCJ5-BbhE/copy).<br><br>
-⚠️⚠️ Note that while it is possible to simply download the individual CSV sheets to use the Universal Field Editor script, the Google Sheet is equipped to handle fields that are restricted to controlled vocabulary terms via predefined drop down menus. As such, creating a personal copy of the CSV sheet will provide a better overall user experience. Once filled out, the sheets can then be exported in CSV format and used by the python script. This approach also has the advantage of avoiding potential character diacritics issues when exporting French CSV files. Copies of the Google Sheet are unique to each user (unless they, themselves, are shared).<br>
+⚠️ Note that while it is possible to simply download the individual CSV sheets to use the Universal Field Editor script, the Google Sheet is equipped to handle fields that are restricted to controlled vocabulary terms via predefined drop down menus. As such, creating a personal copy of the CSV sheet will provide a better overall user experience. Once filled out, the sheets can then be exported in CSV format and used by the python script. This approach also has the advantage of avoiding potential character diacritics issues when exporting French CSV files. Copies of the Google Sheet are unique to each user (unless they, themselves, are shared).<br>
 
 2) Download the [universal_field_editor.py](https://github.com/letendrt/Universal-Field-Editor-DATAVERSE/blob/main/universal_field_editor_v6.3.py) file.
 
-## Understanding the Google Sheet Format 💡🌵🦖
+## Understanding the Google Sheet Format
 1) Once a copy is created, users will be greeted by the "Citation" tab of the document. Note, however, that there are 9 sheets - one for each Borealis metadata block:
 <kbd><img width="1435" height="78" alt="image" src="https://github.com/user-attachments/assets/378fe4bf-8e14-4309-a30b-6a2914b686d6" /></kbd>
 
@@ -38,7 +38,7 @@ The Universal Field Editor is a Python script that enables batch updates to data
 
 This was done to prevent clutter in a singular, massive sheet. You only need to edit the sheets for the metadata blocks you want to edit. In otherwords, if you are not bringing any modifications to the 'Journal' block, you can just ignore it!
 
-### DO NOT CHANGE THE NAMES OF THE COLUMNS AND DO NOT CHANGE THE NAMES OF THE SHEETS⚠️🚧
+### ⚠️ DO NOT CHANGE THE NAMES OF THE COLUMNS AND DO NOT CHANGE THE NAMES OF THE SHEETS
 
 2) Next, bring your attention to the column headers. You'll quickly notice that they are colour coded. There are 5 possible types of headers on the sheets. Each colour denotes a different role or information architecture in Dataverse. It is of paramount importance that users understand what each header type indicates. We will then discuss how to fill out fields of each type.
 <ul>
@@ -57,7 +57,7 @@ This was done to prevent clutter in a singular, massive sheet. You only need to 
 ⚠️The script processes inputs differently depending on whether a primitive or compound field is being added, edited, or removed. <br>
 ⚠️It is important that you pay attention to the following instructions on how to fill in each field type.
 
-### DO NOT CHANGE THE NAMES OF THE COLUMNS AND DO NOT CHANGE THE NAMES OF THE SHEETS⚠️🚧
+### ⚠️ DO NOT CHANGE THE NAMES OF THE COLUMNS AND DO NOT CHANGE THE NAMES OF THE SHEETS
 
 
 ### 🟡Yellow Fields: Direct Object Identifier (doi)🟡
@@ -107,7 +107,7 @@ Controlled vocabulary fields are the easiest to handle since most controlled voc
 Example:<br>
 <kbd><img width="901" height="783" alt="image" src="https://github.com/user-attachments/assets/234700de-4bf0-4d61-9b80-678aeee0159c" /></kbd>
 
-## Removing (without replacing) values from the existing dataset records ↪️🗑️💯
+## Removing (without replacing) values from the existing dataset records
 It is possible that you are using the script to remove existing fields from your datasets. Perhaps there was an error on 200 datasets that you want removed without iterating through every single one of them. The present tool is well-suited to do exactly that. For fields you want removed form your existing datasets, simply enter REMOVE (all caps) in the respective cell on the Google Sheet. The term REMOVE only needs to be entered once per cell, regardless of wether it is a primitive or compound field (see first screenshot below). Note however that controlled vocabulary fields won't accept the REMOVE term. For those, you'll simply have to leave the field empty on your Google sheet (see second screenshot below).
 
 Example 1:<br>
@@ -118,13 +118,13 @@ Example 2 (if a controlled vocabulary field already exists, set the cell to its 
 
 
 
-## Organising files 💫📂 (optional step)
-1) Once you have finished formatting your Google Sheets, download each one in CSV format and place them in a dedicated folder on your device. The naming convention of the files does not matter - though they will become important in the next section (Running the python script 🐍📜).
+## Organising files (optional step)
+1) Once you have finished formatting your Google Sheets, download each one in CSV format and place them in a dedicated folder on your device. The naming convention of the files does not matter - though they will become important in the next section (Running the python script).
 2) Download the most recent version of the python script (universal_field_editor_v6.2.py - version number is privy to changes), and place it in the same folder as the CSV sheets above.
 
- ⚠️File location does not actually matter - file paths will be used to retrieve the CSV files⚠️
+ ⚠️File location does not actually matter - file paths will be used to retrieve the CSV files
 
-## Running the python script 🐍📜
+## Running the python script
 Before running the script, you'll have to edit a few parameters in the python file. This is easy and doesn't require any know-how. Just know that you need to have a local python IDE. You may also need to install python libraries (if you don't know how to do so, follow this useful [python module installation](https://www.geeksforgeeks.org/installation-guide/how-to-install-a-python-module/) guide by Geeks for Geeks).<br><br>
 
 1) Open the python file in your IDE and navigate to the 'CONFIGURATION SETTINGS' section.
@@ -139,7 +139,7 @@ Before running the script, you'll have to edit a few parameters in the python fi
 
     <kbd><img width="975" height="106" alt="image" src="https://github.com/user-attachments/assets/10c9a703-7470-4d04-99a6-961ab628b65b" /></kbd>
 
-4) Run the script, and ensure that everything went well! 🎊🥳
+4) Run the script, and ensure that everything went well!
 
 
 
