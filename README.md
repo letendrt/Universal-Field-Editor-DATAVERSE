@@ -163,22 +163,6 @@ Example 2 (if a controlled vocabulary field already exists, set the cell to its 
 
  ⚠️File location does not actually matter - file paths will be used to retrieve the CSV files
 
-## Running the python script
-Before running the script, you'll have to edit a few parameters in the python file. This is easy and doesn't require any know-how. Just know that you need to have a local python IDE. You may also need to install python libraries (if you don't know how to do so, follow this useful [python module installation](https://www.geeksforgeeks.org/installation-guide/how-to-install-a-python-module/) guide by Geeks for Geeks).<br><br>
-
-1) Open the python file in your IDE and navigate to the 'CONFIGURATION SETTINGS' section.
-
-    <kbd><img width="770" height="103" alt="image" src="https://github.com/user-attachments/assets/8563d358-51a6-4948-ba9d-c2362e358e39" /></kbd>
-
-2) Fetch your copy the path of your CSV files in the placeholder pythong list (python lists are denoted by square brackets). The path directory should be between quotes. If you're loading more than one sheet, add a comma after the entry (after the quote), and then paste the directory of the second CSV sheet. See the example below.
-
-   <kbd><img width="952" height="379" alt="image" src="https://github.com/user-attachments/assets/a0e19765-8a84-472a-8c4e-7bda2b18e806" /></kbd>
-
- 3) Fetch your Borealis/Dataverse API key and paste it in the script placeholder. 
-
-    <kbd><img width="975" height="106" alt="image" src="https://github.com/user-attachments/assets/10c9a703-7470-4d04-99a6-961ab628b65b" /></kbd>
-
-4) Run the script, and ensure that everything went well!
 
 
 
