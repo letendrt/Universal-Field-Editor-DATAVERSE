@@ -1,0 +1,2 @@
+doi,geographicCoverage: country; state; city; otherGeographicCoverage,geographicUnit,geographicBoundingBox: westLongitude; eastLongitude; northLatitude; southLatitude,geospatial
+doi:10.0000/EXEMPLE,Canada; Saskatchewan; Saskatoon;,Census Metropolitan Area,,
