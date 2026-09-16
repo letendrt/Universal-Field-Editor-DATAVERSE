@@ -13,6 +13,45 @@ The Universal Field Editor is a Python script that enables batch updates to data
 2) Minimum python version: 3.6+
 
 ⚠️ Note that Borealis does not support web-based IDEs
+## Installation
+
+Download or clone this repository, then open a terminal in its root folder.
+Run the following commands to create a virtual environment and install the
+required libraries:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+Run the scripts directly with `python3`, as shown below, from the repository
+root with the virtual environment activated. For a new terminal session, run
+`source .venv/bin/activate` again before using the scripts.
+
+## Configuration and API-token setup
+
+The repository includes `config.sample.ini`. Copy it to the ignored local
+configuration file and insert your own settings:
+
+```bash
+cp config.sample.ini config.ini
+chmod 600 config.ini
+```
+
+```ini
+[dataverse]
+server_url = https://demo.borealisdata.ca
+api_token = YOUR_API_TOKEN
+
+[files]
+file_directory = ['/Citation Fields CSV - Citation.csv', '/Citation Fields CSV - Geospatial.csv', '/Citation Fields CSV - Life Sciences.csv', '/Citation Fields CSV - Computational Workflow.csv', '/Citation Fields CSV - 3D Objects.csv', '/Citation Fields CSV - Terms of Use.csv']
+# list of sheets available for directory list is available in the script proper or in the README file
+```
+
+`config.ini` is deliberately excluded by `.gitignore`; never commit or share
+it. `config.sample.ini` contains placeholders only and is safe to publish.
+Command-line values override configuration values.
 
 ## File Requirements
 1) Create a copy of the [Universal Field Editor Google Sheet](https://docs.google.com/spreadsheets/d/1NaGVIVGPJxam1c8Hp5KBd1IT-JyQ4IcUlTiCJ5-BbhE/copy).<br><br>
