@@ -42,6 +42,9 @@ dist/
 *.swo
 *~
 
+# Local configuration file that may contain credentials
+config.ini
+
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb
