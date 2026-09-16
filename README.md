@@ -8,10 +8,6 @@ The Universal Field Editor is a Python script that enables batch updates to data
 4) Supports ALL metadata blocks and ALL metadata fields (last update - April 2026).
 5) Supports Custom Terms of Use edits.
 
-## Minimum Python Requirements
-1) Local IDE (Jupyter, Wing, PyCharm, etc.)
-2) Minimum python version: 3.6+
-
 ⚠️ Note that Borealis does not support web-based IDEs
 ## Installation
 
@@ -53,7 +49,13 @@ file_directory = ['/Citation Fields CSV - Citation.csv', '/Citation Fields CSV -
 it. `config.sample.ini` contains placeholders only and is safe to publish.
 Command-line values override configuration values.
 
-## File Requirements
+## Running the script
+
+```bash
+python3 universal_field_editor.py --config config.ini
+```
+
+## CSV File Requirements
 1) Create a copy of the [Universal Field Editor Google Sheet](https://docs.google.com/spreadsheets/d/1NaGVIVGPJxam1c8Hp5KBd1IT-JyQ4IcUlTiCJ5-BbhE/copy).<br><br>
 ⚠️ Note that while it is possible to simply download the individual CSV sheets to use the Universal Field Editor script, the Google Sheet is equipped to handle fields that are restricted to controlled vocabulary terms via predefined drop down menus. As such, creating a personal copy of the CSV sheet will provide a better overall user experience. Once filled out, the sheets can then be exported in CSV format and used by the python script. This approach also has the advantage of avoiding potential character diacritics issues when exporting French CSV files. Copies of the Google Sheet are unique to each user (unless they, themselves, are shared).<br>
 
