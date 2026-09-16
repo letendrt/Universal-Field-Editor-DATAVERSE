@@ -45,7 +45,7 @@ server_url = https://demo.borealisdata.ca
 api_token = YOUR_API_TOKEN
 
 [files]
-file_directory = ['/Citation Fields CSV - Citation.csv', '/Citation Fields CSV - Geospatial.csv', '/Citation Fields CSV - Life Sciences.csv', '/Citation Fields CSV - Computational Workflow.csv', '/Citation Fields CSV - 3D Objects.csv', '/Citation Fields CSV - Terms of Use.csv']
+file_directory = ['/Citation Fields CSV - Citation.csv', '/Citation Fields CSV - Geospatial.csv'']
 # list of sheets available for directory list is available in the script proper or in the README file
 ```
 
